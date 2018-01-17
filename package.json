@@ -1,0 +1,44 @@
+{
+  "name": "lunchbox",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts-ts": "2.12.0",
+    "run": "^1.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "dev": "concurrently --kill-others \"react-scripts-ts start\" \"node server.js\"",
+    "build": "react-scripts-ts build",
+    "precommit": "lint-staged",
+    "lint": "tslint -c ./tslint.json './src/**/*.ts*'",
+    "fix": "tslint --fix ./src",
+    "format": "prettier --single-quote --write 'src/**/*.ts*' 'src/**/*.js*' 'src/**/*.css'",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "fix",
+      "format",
+      "test",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^22.0.1",
+    "@types/node": "^9.3.0",
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "express": "^4.16.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "postgraphql": "^3.5.1",
+    "prettier": "^1.8.2",
+    "rxjs-tslint-rules": "^3.3.0",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0"
+  }
+}
