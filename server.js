@@ -12,6 +12,13 @@ const schema_name = process.env.SCHEMA_NAME
 const db_name     = process.env.DB_NAME
 const hostname    = process.env.DB_HOSTNAME
 const db_port     = process.env.DB_PORT
+
+app.use(function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+  });
+
 app.use(postgraphql(
 	`postgres://${username}:${password}@${hostname}:${db_port}/${db_name}`,
 	schema_name,

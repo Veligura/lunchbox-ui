@@ -12,12 +12,12 @@ CREATE TABLE lunchbox.company (
   coordinate   POINT
 );
 
-comment on table lunchbox.company is 'A user of the company.';
-comment on column forum_example.person.id is 'The primary unique identifier for the person.';
-comment on column forum_example.person.first_name is 'The person’s first name.';
-comment on column forum_example.person.last_name is 'The person’s last name.';
-comment on column forum_example.person.about is 'A short description about the user, written by the user.';
-comment on column forum_example.person.created_at is 'The time this person was created.';
+-- comment on table lunchbox.company is 'A user of the company.';
+-- comment on column lunchbox.company.id is 'The primary unique identifier for the company.';
+-- comment on column lunchbox.company.person.first_name is 'The person’s first name.';
+-- comment on column flunchbox.company.last_name is 'The person’s last name.';
+-- comment on column lunchbox.company.about is 'A short description about the user, written by the user.';
+-- comment on column lunchbox.company.created_at is 'The time this person was created.';
 
 
 CREATE TABLE lunchbox.customer (
